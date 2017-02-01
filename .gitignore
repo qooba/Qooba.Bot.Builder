@@ -10,3 +10,4 @@ packages
 project.lock.json
 *.user
 /src/Qooba.Bot.Builder.Tests/app.config
+nugetpush.ps1
