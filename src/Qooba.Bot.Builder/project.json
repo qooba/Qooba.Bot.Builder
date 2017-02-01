@@ -1,6 +1,19 @@
 {
-  "version": "1.0.2-*",
-
+  "version": "1.0.0-alpha1",
+  "authors": [ "Jakub So³tys" ],
+  "owners": [ "Jakub So³tys" ],
+  "projectUrl": "https://github.com/qooba/Qooba.Bot.Builder",
+  "description": ".NET Library for creating chatbots.",
+  "title": "Qooba.ServerlessFabric",
+  "iconUrl": "https://raw.githubusercontent.com/qooba/Qooba.Bot.Builder/master/icon.png",
+  "packOptions": {
+    "owners": [ "Jakub So³tys" ],
+    "tags": [ "bots" ],
+    "licenseUrl": "https://raw.github.com/qooba/Qooba.Bot.Builder/master/LICENSE",
+    "requireLicenseAcceptance": false,
+    "iconUrl": "https://raw.githubusercontent.com/qooba/Qooba.Bot.Builder/master/icon.png",
+    "summary": ".NET Library for creating chatbots."
+  },
   "dependencies": {
     "Microsoft.AspNet.WebApi.Core": "5.2.3",
     "Microsoft.Bot.Builder.Azure": "3.2.0",
