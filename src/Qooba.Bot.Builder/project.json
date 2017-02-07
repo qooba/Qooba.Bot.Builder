@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "Microsoft.AspNet.WebApi.Core": "5.2.3",
-    "Microsoft.Bot.Builder.Azure": "3.2.0",
+    "Microsoft.Bot.Builder": "3.5.1",
+    "Microsoft.Bot.Connector": "3.5.1-alpha",
     "Autofac": "4.1.1"
   },
 

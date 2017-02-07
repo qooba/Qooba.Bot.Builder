@@ -1,9 +1,6 @@
 ﻿using Autofac;
-using Microsoft.Bot.Builder.Azure;
 using Microsoft.Bot.Builder.Dialogs;
-using Microsoft.Bot.Builder.Internals.Fibers;
 using Microsoft.Bot.Connector;
-using Newtonsoft.Json;
 using Qooba.Bot.Builder.Abstractions;
 using Qooba.Bot.Builder.ActivityHandlers;
 using Qooba.Bot.Builder.Dialogs;
@@ -14,7 +11,6 @@ using System;
 using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Qooba.Bot.Builder
@@ -193,31 +189,31 @@ namespace Qooba.Bot.Builder
             return this;
         }
 
-        public async Task<object> SendAsync(HttpRequestMessage req)
-        {
-            if (!initialized.IsValueCreated)
-            {
-                await (initialized.Value);
-            }
+        //public async Task<object> SendAsync(HttpRequestMessage req)
+        //{
+        //    if (!initialized.IsValueCreated)
+        //    {
+        //        await (initialized.Value);
+        //    }
 
-            using (BotService.Initialize())
-            {
-                string jsonContent = await req.Content.ReadAsStringAsync();
-                var activity = JsonConvert.DeserializeObject<Activity>(jsonContent);
+        //    using (BotService.Initialize())
+        //    {
+        //        string jsonContent = await req.Content.ReadAsStringAsync();
+        //        var activity = JsonConvert.DeserializeObject<Activity>(jsonContent);
 
-                if (!await BotService.Authenticator.TryAuthenticateAsync(req, new[] { activity }, CancellationToken.None))
-                {
-                    return BotAuthenticator.GenerateUnauthorizedResponse(req);
-                }
+        //        if (!await BotService.Authenticator.TryAuthenticateAsync(req, new[] { activity }, CancellationToken.None))
+        //        {
+        //            return BotAuthenticator.GenerateUnauthorizedResponse(req);
+        //        }
 
-                if (activity != null)
-                {
-                    await Conversation.Container.ResolveKeyed<IActivityHandler>(activity.GetActivityType()).Handle(activity);
-                }
-            }
+        //        if (activity != null)
+        //        {
+        //            await Conversation.Container.ResolveKeyed<IActivityHandler>(activity.GetActivityType()).Handle(activity);
+        //        }
+        //    }
 
-            return req.CreateResponse(HttpStatusCode.Accepted);
-        }
+        //    return req.CreateResponse(HttpStatusCode.Accepted);
+        //}
 
         public async Task<HttpResponseMessage> SendAsync(Activity activity)
         {

@@ -42,7 +42,7 @@ namespace Qooba.Bot.Builder.Abstractions
 
         IBotBuilder RegisterLogger(Action<string> logAction);
 
-        Task<object> SendAsync(HttpRequestMessage req);
+        //Task<object> SendAsync(HttpRequestMessage req);
 
         Task<HttpResponseMessage> SendAsync(Activity activity);
     }
