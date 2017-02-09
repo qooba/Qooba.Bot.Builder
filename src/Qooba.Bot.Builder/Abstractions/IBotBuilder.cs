@@ -42,6 +42,9 @@ namespace Qooba.Bot.Builder.Abstractions
 
         IBotBuilder RegisterLogger(Action<string> logAction);
 
+        IBotBuilder RegisterStateClient<TStateClient>()
+            where TStateClient : IStateClient;
+
         //Task<object> SendAsync(HttpRequestMessage req);
 
         Task<HttpResponseMessage> SendAsync(Activity activity);

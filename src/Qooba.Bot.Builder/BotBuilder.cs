@@ -189,6 +189,18 @@ namespace Qooba.Bot.Builder
             return this;
         }
 
+        public IBotBuilder RegisterStateClient<TStateClient>()
+            where TStateClient : IStateClient
+        {
+            if (!initialized.IsValueCreated)
+            {
+                Action<ContainerBuilder> registration = builder => builder.RegisterType<TStateClient>().As<IStateClient>().InstancePerLifetimeScope();
+                registrations.Enqueue(registration);
+            }
+
+            return this;
+        }
+        
         //public async Task<object> SendAsync(HttpRequestMessage req)
         //{
         //    if (!initialized.IsValueCreated)

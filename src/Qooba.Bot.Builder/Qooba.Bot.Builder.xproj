@@ -6,7 +6,7 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>14350f9a-e0c5-45a7-b271-d76ab2a49550</ProjectGuid>
+    <ProjectGuid>48591dd3-6677-4a2c-b4e4-dd4e027316cc</ProjectGuid>
     <RootNamespace>Qooba.Bot.Builder</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
