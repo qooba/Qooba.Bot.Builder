@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{61AB3198-D407-47A5-B5AD-A4B9497A7711}"
 EndProject
@@ -10,30 +10,50 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Qooba.Bot.Builder", "src\Qooba.Bot.Builder\Qooba.Bot.Builder.xproj", "{14350F9A-E0C5-45A7-B271-D76AB2A49550}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qooba.Bot.Builder", "src\Qooba.Bot.Builder\Qooba.Bot.Builder.csproj", "{11CC5793-F39A-4264-A84C-25279A17CB94}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Qooba.Bot.Builder.Tests", "src\Qooba.Bot.Builder.Tests\Qooba.Bot.Builder.Tests.xproj", "{CFF97928-E006-4818-834F-3C2ACD5B6760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qooba.Bot.Builder.Tests", "src\Qooba.Bot.Builder.Tests\Qooba.Bot.Builder.Tests.csproj", "{FECF3398-5783-47D7-A73D-5F6D3D6316A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{14350F9A-E0C5-45A7-B271-D76AB2A49550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14350F9A-E0C5-45A7-B271-D76AB2A49550}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14350F9A-E0C5-45A7-B271-D76AB2A49550}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14350F9A-E0C5-45A7-B271-D76AB2A49550}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CFF97928-E006-4818-834F-3C2ACD5B6760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFF97928-E006-4818-834F-3C2ACD5B6760}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CFF97928-E006-4818-834F-3C2ACD5B6760}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CFF97928-E006-4818-834F-3C2ACD5B6760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Debug|x64.ActiveCfg = Debug|x64
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Debug|x64.Build.0 = Debug|x64
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Debug|x86.ActiveCfg = Debug|x86
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Debug|x86.Build.0 = Debug|x86
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Release|x64.ActiveCfg = Release|x64
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Release|x64.Build.0 = Release|x64
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Release|x86.ActiveCfg = Release|x86
+		{11CC5793-F39A-4264-A84C-25279A17CB94}.Release|x86.Build.0 = Release|x86
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Debug|x64.ActiveCfg = Debug|x64
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Debug|x64.Build.0 = Debug|x64
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Debug|x86.ActiveCfg = Debug|x86
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Debug|x86.Build.0 = Debug|x86
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Release|x64.ActiveCfg = Release|x64
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Release|x64.Build.0 = Release|x64
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Release|x86.ActiveCfg = Release|x86
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{14350F9A-E0C5-45A7-B271-D76AB2A49550} = {61AB3198-D407-47A5-B5AD-A4B9497A7711}
-		{CFF97928-E006-4818-834F-3C2ACD5B6760} = {61AB3198-D407-47A5-B5AD-A4B9497A7711}
+		{11CC5793-F39A-4264-A84C-25279A17CB94} = {61AB3198-D407-47A5-B5AD-A4B9497A7711}
+		{FECF3398-5783-47D7-A73D-5F6D3D6316A3} = {61AB3198-D407-47A5-B5AD-A4B9497A7711}
 	EndGlobalSection
 EndGlobal
