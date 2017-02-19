@@ -12,6 +12,7 @@ using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.Bot.Builder.Dialogs.Internals;
 
 namespace Qooba.Bot.Builder
 {
@@ -189,18 +190,30 @@ namespace Qooba.Bot.Builder
             return this;
         }
 
-        public IBotBuilder RegisterStateClient<TStateClient>()
-            where TStateClient : IStateClient
+        public IBotBuilder RegisterDataStore<TDataStore>()
+            where TDataStore : IBotDataStore<BotData>
         {
             if (!initialized.IsValueCreated)
             {
-                Action<ContainerBuilder> registration = builder => builder.RegisterType<TStateClient>().As<IStateClient>().InstancePerLifetimeScope();
+                Action<ContainerBuilder> registration = builder => builder.RegisterType<TDataStore>().Keyed<IBotDataStore<BotData>>(typeof(ConnectorStore)).InstancePerLifetimeScope();
                 registrations.Enqueue(registration);
             }
 
             return this;
         }
-        
+
+        public IBotBuilder RegisterBotToUser<TBotToUser>()
+            where TBotToUser : IBotToUser
+        {
+            if (!initialized.IsValueCreated)
+            {
+                Action<ContainerBuilder> registration = builder => builder.RegisterType<TBotToUser>().As<IBotToUser>().InstancePerLifetimeScope();
+                registrations.Enqueue(registration);
+            }
+
+            return this;
+        }
+
         //public async Task<object> SendAsync(HttpRequestMessage req)
         //{
         //    if (!initialized.IsValueCreated)
@@ -285,7 +298,7 @@ namespace Qooba.Bot.Builder
             {
                 registration(builder);
             }
-
+            
             builder.Update(Conversation.Container);
             return true;
         }

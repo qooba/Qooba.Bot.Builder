@@ -3,8 +3,8 @@
   <PropertyGroup>
     <Description>.NET Library for creating chatbots.</Description>
     <AssemblyTitle>Qooba.ServerlessFabric</AssemblyTitle>
-    <VersionPrefix>1.0.0-alpha1</VersionPrefix>
-    <Authors>Jakub So�tys</Authors>
+    <VersionPrefix>1.0.1-alpha1</VersionPrefix>
+    <Authors>Jakub Sołtys</Authors>
     <TargetFramework>net46</TargetFramework>
     <AssemblyName>Qooba.Bot.Builder</AssemblyName>
     <PackageId>Qooba.Bot.Builder</PackageId>

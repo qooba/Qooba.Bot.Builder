@@ -4,6 +4,7 @@ using Qooba.Bot.Builder.Dialogs;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.Bot.Builder.Dialogs.Internals;
 
 namespace Qooba.Bot.Builder.Abstractions
 {
@@ -42,8 +43,11 @@ namespace Qooba.Bot.Builder.Abstractions
 
         IBotBuilder RegisterLogger(Action<string> logAction);
 
-        IBotBuilder RegisterStateClient<TStateClient>()
-            where TStateClient : IStateClient;
+        IBotBuilder RegisterDataStore<TDataStore>()
+            where TDataStore : IBotDataStore<BotData>;
+
+        IBotBuilder RegisterBotToUser<TBotToUser>()
+            where TBotToUser : IBotToUser;
 
         //Task<object> SendAsync(HttpRequestMessage req);
 
